@@ -5,9 +5,17 @@ python:
  - 3.5
  - 3.7
 
+
+sudo: false
+dist: "trusty"
+addons:
+  apt:
+    packages:
+      - "python3-pip"
+
 before install:
- - sudo dnf install python3-pip
- - sudo -H pip install -i https://test.pypi.org/simple/ CEBD1100hw8ThibaultPasturel-pkg-tpasturel
+ - "dnf install python3-pip"
+ - "pip3 install -i https://test.pypi.org/simple/ CEBD1100hw8ThibaultPasturel-pkg-tpasturel"
 
 script:
  - python3 Homework8_Package.py -H
